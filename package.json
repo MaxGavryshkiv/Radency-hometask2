@@ -2,7 +2,7 @@
   "name": "radency-hometask2",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/MaxGavryshkiv/Radency-hometask2",
+  "homepage": "https://MaxGavryshkiv.github.io/Radency-hometask2",
   "dependencies": {
     "@redux-devtools/extension": "^3.2.3",
     "@reduxjs/toolkit": "^1.8.5",
