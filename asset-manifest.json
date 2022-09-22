@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/MaxGavryshkiv/Radency-hometask2/static/css/main.0ebd306a.css",
-    "main.js": "/MaxGavryshkiv/Radency-hometask2/static/js/main.35cd7c11.js",
-    "static/media/trashWhite.svg": "/MaxGavryshkiv/Radency-hometask2/static/media/trashWhite.447e14e01da037493a1c.svg",
-    "static/media/trash.svg": "/MaxGavryshkiv/Radency-hometask2/static/media/trash.e4a86d65c97a476e5ece.svg",
-    "static/media/pencilWhite.svg": "/MaxGavryshkiv/Radency-hometask2/static/media/pencilWhite.bad98f7f166f92ef208b.svg",
-    "static/media/pencil.svg": "/MaxGavryshkiv/Radency-hometask2/static/media/pencil.980fc90d07afce572e03.svg",
-    "static/media/archiveWhite.svg": "/MaxGavryshkiv/Radency-hometask2/static/media/archiveWhite.c378859ca37c5b7bc358.svg",
-    "static/media/archive.svg": "/MaxGavryshkiv/Radency-hometask2/static/media/archive.5f730d456a8c7d8c6aeb.svg",
-    "index.html": "/MaxGavryshkiv/Radency-hometask2/index.html",
-    "static/media/close.svg": "/MaxGavryshkiv/Radency-hometask2/static/media/close.9f829dbea39731db8114.svg",
-    "static/media/closeWhite.svg": "/MaxGavryshkiv/Radency-hometask2/static/media/closeWhite.87410066761ca4283c5d.svg",
-    "main.0ebd306a.css.map": "/MaxGavryshkiv/Radency-hometask2/static/css/main.0ebd306a.css.map",
-    "main.35cd7c11.js.map": "/MaxGavryshkiv/Radency-hometask2/static/js/main.35cd7c11.js.map"
+    "main.css": "/Radency-hometask2/static/css/main.7fcc294c.css",
+    "main.js": "/Radency-hometask2/static/js/main.35cd7c11.js",
+    "static/media/trashWhite.svg": "/Radency-hometask2/static/media/trashWhite.447e14e01da037493a1c.svg",
+    "static/media/trash.svg": "/Radency-hometask2/static/media/trash.e4a86d65c97a476e5ece.svg",
+    "static/media/pencilWhite.svg": "/Radency-hometask2/static/media/pencilWhite.bad98f7f166f92ef208b.svg",
+    "static/media/pencil.svg": "/Radency-hometask2/static/media/pencil.980fc90d07afce572e03.svg",
+    "static/media/archiveWhite.svg": "/Radency-hometask2/static/media/archiveWhite.c378859ca37c5b7bc358.svg",
+    "static/media/archive.svg": "/Radency-hometask2/static/media/archive.5f730d456a8c7d8c6aeb.svg",
+    "index.html": "/Radency-hometask2/index.html",
+    "static/media/close.svg": "/Radency-hometask2/static/media/close.9f829dbea39731db8114.svg",
+    "static/media/closeWhite.svg": "/Radency-hometask2/static/media/closeWhite.87410066761ca4283c5d.svg",
+    "main.7fcc294c.css.map": "/Radency-hometask2/static/css/main.7fcc294c.css.map",
+    "main.35cd7c11.js.map": "/Radency-hometask2/static/js/main.35cd7c11.js.map"
   },
   "entrypoints": [
-    "static/css/main.0ebd306a.css",
+    "static/css/main.7fcc294c.css",
     "static/js/main.35cd7c11.js"
   ]
 }
