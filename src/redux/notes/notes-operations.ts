@@ -10,8 +10,8 @@ const {
   deleteNote,
   archiveNote,
   editNote,
-  unarchiveNote,
   deleteArchiveNote,
+  unarchiveNote,
 } = notesAction;
 
 const notesStatsOperation = () => async (dispatch: (arg0: any) => void) => {
