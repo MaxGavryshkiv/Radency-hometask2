@@ -6,13 +6,16 @@ function TableBody({ arrOfObj, isIncludeSvg, openEditForm }: IBodyProps) {
   return (
     <tbody>
       {arrOfObj.map((el) => {
-        if (el.id === undefined) {
-          el.id = shortid.generate();
+        let key;
+
+        if (el.id !== undefined) {
+          key = el.id;
         }
+        key = shortid();
 
         return (
           <TableRow
-            key={el.id}
+            key={key}
             rowContent={el}
             isIncludeSvg={isIncludeSvg}
             openEditForm={openEditForm}

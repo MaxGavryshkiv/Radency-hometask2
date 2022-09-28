@@ -1,18 +1,17 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 import { getNotes } from "../../redux/notes/notes-selectors";
-import notesActions from "../../redux/notes/notes-actions";
+import notesOperation from "../../redux/notes/notes-operations";
 import styles from "./Form.module.css";
 import { IFormProps } from "../../interfaces/Form.interface";
 
 function Form({ closeModal, idOfNotes = undefined }: IFormProps) {
   const notes = useSelector(getNotes);
-  const dispatch = useDispatch();
+  const dispatch: (dispatch: any) => Promise<void> = useDispatch();
 
   const [noteName, setNoteName] = useState("");
   const [category, setCategory] = useState("");
   const [content, setContent] = useState("");
-  const [created, setCreated] = useState("");
 
   const handleChangeName = (event: React.ChangeEvent<HTMLInputElement>) =>
     setNoteName(event.target.value);
@@ -32,19 +31,21 @@ function Form({ closeModal, idOfNotes = undefined }: IFormProps) {
     setNoteName(getNote[0].noteName);
     setCategory(getNote[0].category);
     setContent(getNote[0].content);
-    setCreated(getNote[0].created);
   }
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     if (idOfNotes) {
-      dispatch(
-        notesActions.editNote(idOfNotes, noteName, created, category, content)
+      await dispatch(
+        notesOperation.editNoteOperation(idOfNotes, noteName, category, content)
       );
       closeModal();
     } else {
-      dispatch(notesActions.addNote(noteName, category, content));
+      await dispatch(
+        notesOperation.addNoteOperation(noteName, category, content)
+      );
+      await dispatch(notesOperation.notesStatsOperation());
       closeModal();
     }
   };

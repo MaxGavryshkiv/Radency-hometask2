@@ -1,5 +1,4 @@
 import { useDispatch } from "react-redux";
-import notesActions from "../../redux/notes/notes-actions";
 import styles from "./Row.module.css";
 import { IRowProps } from "../../interfaces/Table.interface";
 import {
@@ -7,9 +6,10 @@ import {
   contentValidation,
   dateLengthValidation,
 } from "../../utils/contentValidation";
+import notesOperation from "../../redux/notes/notes-operations";
 
 function TableRow({ rowContent, isIncludeSvg, openEditForm }: IRowProps) {
-  const dispatch = useDispatch();
+  const dispatch: (dispatch: any) => Promise<void> = useDispatch();
 
   if (isIncludeSvg === "notesSvg" || isIncludeSvg === "archiveSvg") {
     rowContent = { ...rowContent, isIncludeSvg };
@@ -30,24 +30,28 @@ function TableRow({ rowContent, isIncludeSvg, openEditForm }: IRowProps) {
       openEditForm(rowContent.id);
     }
   };
-  const handleClickArchiveNote = () => {
+  const handleClickArchiveNote = async () => {
     if (rowContent.id !== undefined) {
-      dispatch(notesActions.archiveNote(rowContent.id));
+      await dispatch(notesOperation.archiveNoteOperation(rowContent.id));
+      await dispatch(notesOperation.notesStatsOperation());
     }
   };
-  const handleClickDeleteNote = () => {
+  const handleClickDeleteNote = async () => {
     if (rowContent.id !== undefined) {
-      dispatch(notesActions.deleteNote(rowContent.id));
+      await dispatch(notesOperation.deleteNoteOperation(rowContent.id));
+      await dispatch(notesOperation.notesStatsOperation());
     }
   };
-  const handleClickUnarchiveNote = () => {
+  const handleClickUnarchiveNote = async () => {
     if (rowContent.id !== undefined) {
-      dispatch(notesActions.unarchiveNote(rowContent.id));
+      await dispatch(notesOperation.unarchiveNoteOperation(rowContent.id));
+      await dispatch(notesOperation.notesStatsOperation());
     }
   };
-  const handleClickDeleteArchiveNote = () => {
+  const handleClickDeleteArchiveNote = async () => {
     if (rowContent.id !== undefined) {
-      dispatch(notesActions.deleteArchiveNote(rowContent.id));
+      await dispatch(notesOperation.deleteArchiveNoteOperation(rowContent.id));
+      await dispatch(notesOperation.notesStatsOperation());
     }
   };
 

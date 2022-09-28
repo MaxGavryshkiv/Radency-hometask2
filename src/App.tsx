@@ -1,19 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Table from "./Components/Table/Table";
 import Modal from "./layout/Modal/Modal";
 import Form from "./Components/Form/Form";
 import Button from "./Components/Button/Button";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import {
   getNotes,
   getArchiveNotes,
   getCountOfAllNotes,
 } from "./redux/notes/notes-selectors";
+import notesOperations from "./redux/notes/notes-operations";
 
 const App = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalContent, setModalContent] = useState("");
   const [idOfNote, setIdOfNote] = useState("");
+  const dispatch: (dispatch: any) => Promise<void> = useDispatch();
+  useEffect(() => {
+    dispatch(notesOperations.fetchNotesOperation());
+    dispatch(notesOperations.fetchArchiveNotesOperation());
+    dispatch(notesOperations.notesStatsOperation());
+  }, [dispatch]);
 
   const notes = useSelector(getNotes);
   const archiveNotes = useSelector(getArchiveNotes);
@@ -61,6 +68,7 @@ const App = () => {
           arrOfObj={countOfAllNotes}
           isIncludeSvg={undefined}
         />
+
         <Button handleClick={openArchive} text={"Open Archive"} />
       </div>
 
