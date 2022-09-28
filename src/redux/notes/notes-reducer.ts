@@ -39,7 +39,6 @@ const notes = createReducer(initialState, {
     return { ...state, archiveNotes: payload };
   },
   [notesActions.addNote.type]: (state, { payload }) => {
-    console.log(payload);
     return { ...state, notes: [...state.notes, payload] };
   },
   [notesActions.deleteNote.type]: (state, { payload }) => {
