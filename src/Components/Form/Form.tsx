@@ -85,7 +85,7 @@ function Form({ closeModal, idOfNotes = undefined }: IFormProps) {
       <label htmlFor="noteContent" className="flex flex-col items-start">
         <span>Note Content</span>
         <textarea
-          className="max-w-4xl w-full h-80 resize-none leading-normal rounded border border-solid border-gray-300 shadow-sm mb-4"
+          className="max-w-6xl w-full h-80 resize-none leading-normal rounded border border-solid border-gray-300 shadow-sm mb-4"
           required
           name="noteContent"
           id="noteContent"
