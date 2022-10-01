@@ -18,7 +18,7 @@ class Modal extends Component<IModalProps, {}> {
         className="fixed top-0 left-0 w-screen h-screen flex justify-center items-center bg-overlay z-50"
         onClick={this.handleBackdropClick}
       >
-        <div className="relative max-w-5xl h-650 w-full bg-white">
+        <div className="relative max-w-7xl h-650 w-full bg-white">
           <button
             onClick={this.props.onClose}
             type="button"
