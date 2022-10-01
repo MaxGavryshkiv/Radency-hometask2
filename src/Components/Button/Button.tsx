@@ -1,5 +1,3 @@
-import styles from "./Button.module.css";
-
 const Button = ({
   handleClick,
   text,
@@ -8,7 +6,10 @@ const Button = ({
   text: string;
 }) => {
   return (
-    <button onClick={handleClick} className={styles.button}>
+    <button
+      onClick={handleClick}
+      className="absolute right-cent w-36 h-12 rounded-3xl border-solid border border-black bg-white active:bg-gray-200 "
+    >
       {text}
     </button>
   );
