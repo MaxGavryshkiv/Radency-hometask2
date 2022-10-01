@@ -2,7 +2,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 import { getNotes } from "../../redux/notes/notes-selectors";
 import notesOperation from "../../redux/notes/notes-operations";
-import styles from "./Form.module.css";
 import { IFormProps } from "../../interfaces/Form.interface";
 
 function Form({ closeModal, idOfNotes = undefined }: IFormProps) {
@@ -51,12 +50,12 @@ function Form({ closeModal, idOfNotes = undefined }: IFormProps) {
   };
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
-      <h2 className={styles.formTitle}>Create a note</h2>
-      <label htmlFor="noteName" className={styles.formLabel}>
+    <form className="flex flex-col pl-4 mb-4" onSubmit={handleSubmit}>
+      <h2 className="font-bold text-center">Create a note</h2>
+      <label htmlFor="noteName" className="flex flex-col items-start">
         <span>Note Name</span>
         <input
-          className={styles.noteName}
+          className="w-80 h-10 leading-normal rounded border border-solid border-gray-300 shadow-sm mb-8"
           type="text"
           id="noteName"
           name="noteName"
@@ -66,10 +65,10 @@ function Form({ closeModal, idOfNotes = undefined }: IFormProps) {
           onChange={handleChangeName}
         />
       </label>
-      <label htmlFor="noteCategory" className={styles.formLabel}>
+      <label htmlFor="noteCategory" className="flex flex-col items-start">
         <span>Note Category</span>
         <select
-          className={styles.noteCategory}
+          className="w-52 h-8 leading-normal rounded border border-solid border-gray-300 shadow-sm mb-8"
           name="noteCategory"
           id="noteCategory"
           required
@@ -83,10 +82,10 @@ function Form({ closeModal, idOfNotes = undefined }: IFormProps) {
         </select>
       </label>
 
-      <label htmlFor="noteContent" className={styles.formLabel}>
+      <label htmlFor="noteContent" className="flex flex-col items-start">
         <span>Note Content</span>
         <textarea
-          className={styles.noteContent}
+          className="max-w-4xl w-full h-80 resize-none leading-normal rounded border border-solid border-gray-300 shadow-sm mb-4"
           required
           name="noteContent"
           id="noteContent"
@@ -96,7 +95,10 @@ function Form({ closeModal, idOfNotes = undefined }: IFormProps) {
         ></textarea>
       </label>
 
-      <button className={styles.button} type="submit">
+      <button
+        className="w-36 h-12 rounded-3xl border border-solid border-gray-50 shadow-sm bg-white active:bg-gray-100"
+        type="submit"
+      >
         Send
       </button>
     </form>

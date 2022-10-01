@@ -52,6 +52,9 @@
   },
   "devDependencies": {
     "@types/shortid": "^0.0.29",
+    "autoprefixer": "^10.4.12",
+    "postcss": "^8.4.17",
+    "tailwindcss": "^3.1.8",
     "typescript-plugin-css-modules": "^3.4.0",
     "typings-for-css-modules-loader": "^1.7.0"
   }

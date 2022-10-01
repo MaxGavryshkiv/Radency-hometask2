@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import styles from "./Row.module.css";
+
 import { IRowProps } from "../../interfaces/Table.interface";
 import {
   nameValidation,
@@ -59,33 +59,44 @@ function TableRow({ rowContent, isIncludeSvg, openEditForm }: IRowProps) {
     <tr>
       {Object.entries(rowContent).map(([key, value], index) =>
         key === "id" ? null : value === "notesSvg" ? (
-          <td key={index}>
+          <td
+            key={index}
+            className="border-solid border-t border-b border-black text-left p-1 h-20 first:border-l first:rounded-l-3xl last:border-r last:rounded-r-3xl"
+          >
             <button
               onClick={handleClickEditNote}
-              className={styles.edit}
+              className="h-8 w-8 bg-transparent border-0 rounded-full bg-20 bg-center bg-no-repeat bg-bttn-edit active:bg-active-bttn-edit active:bg-black"
             ></button>
             <button
               onClick={handleClickArchiveNote}
-              className={styles.archive}
+              className="h-8 w-8 bg-transparent border-0 rounded-full bg-20 bg-center bg-no-repeat bg-bttn-archive active:bg-active-bttn-archive active:bg-black"
             ></button>
             <button
               onClick={handleClickDeleteNote}
-              className={styles.delete}
+              className="h-8 w-8 bg-transparent border-0 rounded-full bg-20 bg-center bg-no-repeat bg-bttn-delete active:bg-active-bttn-delete active:bg-black"
             ></button>
           </td>
         ) : value === "archiveSvg" ? (
-          <td key={index}>
+          <td
+            key={index}
+            className="border-solid border-t border-b border-black text-left p-1 h-20 first:border-l first:rounded-l-3xl last:border-r last:rounded-r-3xl"
+          >
             <button
               onClick={handleClickUnarchiveNote}
-              className={styles.archive}
+              className="h-8 w-8 bg-transparent border-0 rounded-full bg-20 bg-center bg-no-repeat bg-bttn-archive active:bg-active-bttn-archive active:bg-black"
             ></button>
             <button
               onClick={handleClickDeleteArchiveNote}
-              className={styles.delete}
+              className="h-8 w-8 bg-transparent border-0 rounded-full bg-20 bg-center bg-no-repeat bg-bttn-delete active:bg-active-bttn-delete active:bg-black"
             ></button>
           </td>
         ) : (
-          <td key={index}>{value}</td>
+          <td
+            className="border-solid border-t border-b border-black text-left p-1 h-20 first:border-l first:rounded-l-3xl last:border-r last:rounded-r-3xl"
+            key={index}
+          >
+            {value}
+          </td>
         )
       )}
     </tr>
