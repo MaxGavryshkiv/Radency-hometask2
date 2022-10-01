@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Radency-hometask2/static/css/main.7fcc294c.css",
-    "main.js": "/Radency-hometask2/static/js/main.cade5911.js",
+    "main.css": "/Radency-hometask2/static/css/main.d39bc33c.css",
+    "main.js": "/Radency-hometask2/static/js/main.93721513.js",
     "static/media/trashWhite.svg": "/Radency-hometask2/static/media/trashWhite.447e14e01da037493a1c.svg",
     "static/media/trash.svg": "/Radency-hometask2/static/media/trash.e4a86d65c97a476e5ece.svg",
     "static/media/pencilWhite.svg": "/Radency-hometask2/static/media/pencilWhite.bad98f7f166f92ef208b.svg",
@@ -11,11 +11,11 @@
     "index.html": "/Radency-hometask2/index.html",
     "static/media/close.svg": "/Radency-hometask2/static/media/close.9f829dbea39731db8114.svg",
     "static/media/closeWhite.svg": "/Radency-hometask2/static/media/closeWhite.87410066761ca4283c5d.svg",
-    "main.7fcc294c.css.map": "/Radency-hometask2/static/css/main.7fcc294c.css.map",
-    "main.cade5911.js.map": "/Radency-hometask2/static/js/main.cade5911.js.map"
+    "main.d39bc33c.css.map": "/Radency-hometask2/static/css/main.d39bc33c.css.map",
+    "main.93721513.js.map": "/Radency-hometask2/static/js/main.93721513.js.map"
   },
   "entrypoints": [
-    "static/css/main.7fcc294c.css",
-    "static/js/main.cade5911.js"
+    "static/css/main.d39bc33c.css",
+    "static/js/main.93721513.js"
   ]
 }
