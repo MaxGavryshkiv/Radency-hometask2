@@ -1,6 +1,6 @@
 import axios from "axios";
 import notesAction from "./notes-actions";
-axios.defaults.baseURL = "https://radency-testtask3.herokuapp.com";
+axios.defaults.baseURL = "https://radency-task3.onrender.com";
 
 const {
   notesStats,
