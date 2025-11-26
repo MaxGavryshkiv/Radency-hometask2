@@ -1,6 +1,6 @@
 import axios from "axios";
 import notesAction from "./notes-actions";
-axios.defaults.baseURL = "https://radency-task3.onrender.com";
+axios.defaults.baseURL = "https://notesbackend-rho.vercel.app";
 
 const {
   notesStats,
